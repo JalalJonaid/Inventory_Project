@@ -5,12 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Inventory</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js"></script>
 </head>
 <body> 
     <header>
         <div>
-            <h1>Inventory Manager</h1>
+            <h1>Grocery Store</h1>
         </div>
     </header>
+    <div class = "container">
+        <div class = "column">
+            <div class = "item">
+                <h2>Bread</h2>
+                <p>Price: <span id = "bread-price">$5</span></p>
+                <p>In Stock: <span id = "bread-stock">4</span></p> 
+            </div>
+            <div class = "item">
+                <h2>Milk</h2>
+                <p>Price: <span id = "milk-price">$2</span></p>
+                <p>In Stock: <span id = "milk-stock">10</span></p> 
+            </div>
+            <div class = "item">
+                <h2>Eggs</h2>
+                <p>Price: <span id = "eggs-price">$3</span></p>
+                <p>In Stock: <span id = "eggs-stock">8</span></p> 
+            </div>
+        </div>
+        <div class = "column">
+            <form>
+                <label for= "name">Name:</label>
+                <input type = "text" id = "name" required>
+                <label for= "price">Price:</label>
+                <input type = "number" id = "price" required>
+                <label for= "Stock">Stock:</label>
+                <input type = "number" id = "stock" required>
+                <button type = "sumbit">Submit</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
