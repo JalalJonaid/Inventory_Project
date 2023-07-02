@@ -1,18 +1,20 @@
-// const itemForm = document.getElementById('item-form');
-// const itemList = document.getElementById('items-list');
+const addItemForm = document.getElementById('add-item');
+const itemList = document.getElementById('items-list');
 
-// itemForm.addEventListener('submit', function(event) {
-//     event.preventDefault();
+addItemForm.addEventListener('submit', function(event) {
+    event.preventDefault();
 
-//     const itemName = document.getElementById('name').value;
-//     const itemPrice = document.getElementById('price').value;
-//     const itemStock = document.getElementById('stock').value;
+    const newItemName = document.getElementById('new-item-name').value;
+    const newItemPrice = document.getElementById('new-item-price').value;
+    const newItemStock = document.getElementById('new-item-stock').value;
 
-// const listItem = document.createElement('li');
-// listItem.innerHTML = `<strong>${itemName}</strong> - Price: $${itemPrice} - In Stock: ${itemStock}`;
+    const listItem = document.createElement('li');
+    listItem.innerHTML = `<strong>${newItemName} - Price: $${newItemPrice} - In Stock: ${newItemStock}`;
 
-// itemList.appendChild(listItem);
-// });
+    itemList.appendChild(listItem);
+
+    addItemForm.reset();
+});
 
 function changeStock(item, action) {
     const stockElement = document.getElementById(`${item}-stock`);
