@@ -21,6 +21,7 @@
                 <p>In Stock: <span id = "bread-stock">4</span></p>
                 <button class ="stock-btn" onclick="changeStock('bread', 'add')">+</button>
                 <button class ="stock-btn" onclick="changeStock('bread', 'subtract')">-</button>  
+                <button class ="delete-btn" onclick="deleteItem('bread')">Delete</button>
             </div>
             <div class = "item">
                 <img src="./img/milk.png" alt="Milk">
@@ -28,7 +29,8 @@
                 <p>Price: <span id = "milk-price">$2</span></p>
                 <p>In Stock: <span id = "milk-stock">10</span></p> 
                 <button class ="stock-btn" onclick="changeStock('milk', 'add')">+</button>
-                <button class ="stock-btn" onclick="changeStock('milk', 'subtract')">-</button>  
+                <button class ="stock-btn" onclick="changeStock('milk', 'subtract')">-</button>
+                <button class ="delete-btn" onclick="deleteItem('milk')">Delete</button>  
             </div>
             <div class = "item">
                 <img src="./img/eggs.png" alt="Eggs">
@@ -36,23 +38,24 @@
                 <p>Price: <span id = "eggs-price">$3</span></p>
                 <p>In Stock: <span id = "eggs-stock">8</span></p>
                 <button class ="stock-btn" onclick="changeStock('eggs', 'add')">+</button>
-                <button class ="stock-btn" onclick="changeStock('eggs', 'subtract')">-</button>   
+                <button class ="stock-btn" onclick="changeStock('eggs', 'subtract')">-</button>
+                <button class ="delete-btn" onclick="deleteItem('eggs')">Delete</button>   
             </div>
         </div>
         <div class = "column">
             <h1>Add Item to Inventory</h1>
-            <form id="add-item">
+            <form id="add-item-form">
                 <label for= "new-item-name">Name:</label>
                 <input type = "text" id = "new-item-name" required>
                 <label for= "new-item-price">Price:</label>
                 <input type = "number" id = "new-item-price" min="0" required>
                 <label for= "new-item-stock">Stock:</label>
-                <input type = "number" id = "new-item-stock" required>
+                <input type = "number" id = "new-item-stock" min="0" required>
                 <button type = "submit">Add Item</button>
             </form>
         </div>
         <div id = "submitted-items">
-            <h2>Your Items:</h2>
+            <h2>Added Items:</h2>
             <ul id="items-list"></ul>
         </div>
     </div>
