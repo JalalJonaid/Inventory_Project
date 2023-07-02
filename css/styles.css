@@ -15,3 +15,36 @@ h1 {
     font-size: 32px;
     font-weight: bold;
 }
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.column {
+    padding: 20px;
+    background-color: #009dff;
+}
+
+.item {
+    background: #a523e1;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+form {
+    display: grid;
+    grid-gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 5px;
+}
